@@ -30,7 +30,7 @@ if "--help" in args:
     exit(0)
 
 if "--prompt" in args:
-    prefix_index = args.index("--prefix")
+    prefix_index = args.index("--prompt")
     if prefix_index + 1 < len(args):
         prompt = args[prefix_index + 1] + "\n"
         del args[prefix_index:prefix_index + 2]
