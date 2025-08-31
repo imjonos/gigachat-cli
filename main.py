@@ -22,6 +22,13 @@ prompt = ""
 args = sys.argv[1:]
 flag_prefix = ""
 
+if "--help" in args:
+    print('--help')
+    print('--prompt text')
+    for flag in list(flags.keys()):
+        print(flag)
+    exit(0)
+
 if "--prompt" in args:
     prefix_index = args.index("--prefix")
     if prefix_index + 1 < len(args):
